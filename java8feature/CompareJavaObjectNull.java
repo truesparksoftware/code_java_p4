@@ -18,6 +18,8 @@ class Student {
 	private Double loc;
 }
 
+
+
 public class CompareJavaObjectNull {
 	public static void main(String[] args) {
 		List<Student> list = new ArrayList<Student>();
@@ -33,5 +35,7 @@ public class CompareJavaObjectNull {
 		list.add(s1);
 		List<Student> cmp= list.stream().filter(x->x!=null).sorted(Comparator.comparing(Student::getLoc)).collect(Collectors.toList());
 		System.out.println(cmp);
+		
+		
 	}
 }
